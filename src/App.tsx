@@ -1,15 +1,16 @@
 import React from 'react';
 import './App.css';
-import Home from "./page/Home/Home";
 import {RouterProvider} from "react-router-dom";
 import Router from "./route/router";
+import {ThemeProvider} from "@mui/material/styles";
+import {theme} from "theme/theme";
 
  
 function App() {
   return (
-    <div>
-      <Home/>
-    </div>
+    <ThemeProvider theme={theme}>
+      <RouterProvider router={Router}/>
+    </ThemeProvider>
   );
 }
 
