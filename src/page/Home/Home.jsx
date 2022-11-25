@@ -30,11 +30,11 @@ const Home =()=>{
         handleGetData()
     },[])
 
-
+    console.log(coins)
     return(
         <>
             <DialogSearch open={open} setOpen={setOpen} coins={coins} selectFees={selectFees} setSelectFees={setSelectFees} setTextField={setTextField} textField={textField}/>
-            <Grid sx={{display:{ xs:'none' , md:'block'}, marginBottom:'200px'}}>
+            <Grid sx={{display:{ xs:'none' , md:'block'}, marginBottom:'200px', marginTop:'80px'}}>
                 <Grid container sx={{justifyContent:'center', marginTop:'20px'}}>
                     <img src={Photo} alt="" style={{width:'250px',height:'88px'}}></img>
                 </Grid>
