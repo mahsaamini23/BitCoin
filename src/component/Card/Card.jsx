@@ -1,8 +1,6 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import { grey } from "@mui/material/colors";
-
 
 
 const Card =({key, name , image , price, change , color,Icon})=>{
