@@ -104,11 +104,11 @@ const MainTable=({coins})=>{
             <Grid sx={{ width:'300px',display:{xs:'flex', md:'none'}, overflow:'scroll',gap:'20px'}}>
                 {state === true ?
                     maxValue.map((coin, index)=>(
-                        <Card key={index} name={coin.name} image={coin.image} price={coin.current_price} change={coin.price_change_percentage_24h} color='green' Icon={<ArrowDropUpIcon/>}/>
+                        <Card id={coin.id} name={coin.name} image={coin.image} price={coin.current_price} change={coin.price_change_percentage_24h} color='green' Icon={<ArrowDropUpIcon/>}/>
                     ))
                 :
-                    minValue.map((coin, index)=>(
-                        <Card key={index} name={coin.name} image={coin.image} price={coin.current_price} change={coin.price_change_percentage_24h} color="red" Icon={<ArrowDropDownIcon/>}/>
+                    minValue.map((coin,index)=>(
+                        <Card id={coin.id} name={coin.name} image={coin.image} price={coin.current_price} change={coin.price_change_percentage_24h} color="red" Icon={<ArrowDropDownIcon/>}/>
                     ))
                 }
             </Grid>
