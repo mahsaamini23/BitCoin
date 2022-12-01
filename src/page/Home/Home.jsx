@@ -15,10 +15,15 @@ const Home =()=>{
     const [open, setOpen] = useState(false)
     const [coins , setCoins] = useState([])
     const [selectFees, setSelectFees] = useState([])
-    const [textField , setTextField] = useState({Toman:'', unit:'' , name:''})
+    const [textField , setTextField] = useState({Toman:'', name:''})
+    const [unit, setUnit] = useState(1)
 
     const handleClickOpen=()=>{
         setOpen(true)
+    }
+
+    const handleChangeUnit=(e)=>{
+        setUnit(e.target.value)
     }
 
     const handleGetData = async () => {
@@ -39,8 +44,8 @@ const Home =()=>{
                     <img src={Photo} alt="" style={{width:'250px',height:'88px'}}></img>
                 </Grid>
                 <Grid container sx={{justifyContent:'center' , gap:'2px',marginTop:'8px',marginBottom:'18px'}} >
-                    <StyledTextField label="تومان" type="number" name="Toman" value={textField.Toman} onClick={handleClickOpen}/>
-                    <StyledTextField label="واحد" type="number" name="unit" value='1' onClick={handleClickOpen}/>
+                    <StyledTextField label="دلار" type="number" name="Toman" value={(Number(textField.Toman)*unit).toFixed(3)} />
+                    <StyledTextField label="واحد" type="number" name="unit" value={unit} onChange={handleChangeUnit}/>
                     <StyledTextField label="انتخاب ارز"  type="text" name="name"  value={textField.name} onClick={handleClickOpen}/>
                 </Grid>
                 <Grid container sx={{justifyContent:'center',gap:'5px'}}>
