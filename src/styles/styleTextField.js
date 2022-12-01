@@ -7,18 +7,22 @@ const StyledTextField = styled(TextField)(({theme})=>({
         color:'grey',
     },
     '& .MuiOutlinedInput-root': {
-        width: 220,
+        width: 240,
         height: 40,
         color:'grey',
         
         '& fieldset': {
             borderColor: 'grey',
         },
+        '&:hover fieldset': {
+            borderColor: '#808080',
+        },
+        '&.Mui-focused fieldset': {
+            borderSize:'.1px',
+            borderColor: '#808080',
+        },
     },
-    '&.Mui-focused fieldset': {
-        border: '1px solid black',
-        borderColor:'grey',
-    },    
+       
 }
 ))
 
